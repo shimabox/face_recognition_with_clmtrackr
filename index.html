@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Face recognition with clmtrackr.js</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=768" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<h1>Face recognition with clmtrackr.js</h1>
+<div class="buttons">
+    <div>
+        <input id="facing-mode" type="checkbox" value="1" checked>
+        <span><label for="facing-mode">Camera switch(on: Front / off: Rear) ※Only for smartphone</label></span>
+    </div>
+    <div>
+        <input id="to-grayscale" type="checkbox" value="0">
+        <span><label for="to-grayscale">To grayscale</label></span>
+        <input id="debug" type="checkbox" value="0">
+        <span><label for="debug">Debug</label></span>
+    </div>
+</div>
+<div class="container">
+    <video id="camera" playsinline autoplay></video>
+    <canvas id="from-video"></canvas>
+    <canvas id="cliped" width=0 height=0></canvas>
+    <div id="dummy-box">
+        <div id="dummy-wrapper">
+            <canvas id="dummy" width=0 height=0></canvas>
+            <div class="bar">
+                <div class="range">
+                    <span class="range-val-wrapper">scale: <span id="scale-val"></span> ( <span class="range-val"></span>% of the face length )</span>
+                    <input id="scale" type="range" min="0" max="20" value="10">
+                </div>
+                <div class="range">
+                    <span class="range-val-wrapper">margin-top: scale * <span class="range-val"></span></span>
+                    <input id="margin_of_top_scale" type="range" min="0" max="10" value="5">
+                </div>
+                <div class="range">
+                    <span class="range-val-wrapper">margin-bottom: scale * <span class="range-val"></span></span>
+                    <input id="margin_of_bottom_scale" type="range" min="0" max="20" value="6">
+                </div>
+                <!-- 前面カメラの場合、transform: scaleX(-1); により left -> right, right -> left に逆転 -->
+                <div class="range">
+                    <span class="range-val-wrapper"><span id="range-margin-right">margin-right</span>: scale * <span class="range-val"></span></span>
+                    <input id="margin_of_right_scale" type="range" min="0" max="20" value="4">
+                </div>
+                <div class="range">
+                    <span class="range-val-wrapper"><span id="range-margin-left">margin-left</span>: scale * <span class="range-val"></span></span>
+                    <input id="margin_of_left_scale" type="range" min="0" max="10" value="2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/util/Stats.js"></script>
+<script src="js/clmtrackr.min.js"></script>
+<script src="js/face_recognition_with_clmtrackr.js"></script>
+</body>
+</html>
