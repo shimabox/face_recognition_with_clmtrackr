@@ -13,7 +13,7 @@ It runs if it is a browser supporting the **getUserMedia API**.
 - Face recognition
   - Display recognized faces with different canvas
 - It corresponds to a smartphone
-  - Operation confirmed with iOS 11.4 / Safari
+  - Operation confirmed with `iOS 11.4/Safari`
 - Switch front and rear camera
   - Only for smartphone
 - Grayscale conversion
