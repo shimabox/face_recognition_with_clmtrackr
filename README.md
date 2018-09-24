@@ -6,6 +6,9 @@ https://shimabox.github.io/face_recognition_with_clmtrackr/
 
 ![demo](https://github.com/shimabox/assets/blob/master/face_recognition_with_clmtrackr/qr.png)
 
+It runs if it is a browser supporting the **getUserMedia API**.  
+[Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/#feat=stream "Can I use... Support tables for HTML5, CSS3, etc")
+
 ## Feature
 - Face recognition
   - Display recognized faces with different canvas
