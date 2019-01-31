@@ -244,8 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function draw_loop() {
         requestAnimationFrame(draw_loop);
 
-        adjust_proportions();
-
         let w = video_canvas.width;
         let h = video_canvas.height;
         video_canvas_ctx.clearRect(0, 0, w, h);
